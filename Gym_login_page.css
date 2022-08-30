@@ -1,0 +1,19 @@
+legend
+{
+    background-color: rgb(139, 165, 22);
+    margin:auto;
+    width:50%;
+    text-align:center;
+    font size:100%;
+}
+fieldset
+{
+    padding-top: 50px;
+    padding-bottom:50px;
+    background-color: rgb(15, 51, 92);
+    width:45%;
+    text-align:center;
+    border-radius: 20px;
+    border-color:rgb(177, 220, 20);
+    box-shadow: 5px 5px black;
+}

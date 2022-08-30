@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Gym_login_page.css">
+    <title>Gym Login</title>
+</head>
+<style>
+    body
+    {
+        background: url("Pics/background4.jpg")no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        padding-top:175px;
+        padding-left:425px;
+    }
+</style>
+<body>
+    <fieldset>
+        <legend>Login</legend>
+        <form action="login.php" method="POST">
+
+
+            <label for="name" style="color: rgb(177, 220, 20);">UserID:</label>
+            <div class="username">
+                <input type="text" name="myID" id="name" required autocomplete="off">
+            </div> <br>
+
+            <label for="passwd" style="color: rgb(177, 220, 20);">Password:</label>
+            <div class="password">
+                <input type="text" name="my_pw" id="passwd" required autocomplete="off">
+            </div><br>
+
+            <div class="login_button">
+                <input type="submit" value="Login" name="submit">;
+                <input type="reset" value="Reset">;
+                <a href="Gym_signup_page.html"><button type="button">SignUp</button></a>
+            </div>
+
+        </form>
+    </fieldset>
+</body>
+
+</html>

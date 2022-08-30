@@ -1,0 +1,103 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Gym_login_page.css">
+    <title>Gym Signup</title>
+</head>
+<style>
+    body {
+        background: url("Pics/background4.jpg")no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        padding-top: 75px;
+        padding-left: 425px;
+    }
+</style>
+
+<body>
+    <fieldset>
+        <legend>Signup</legend>
+        <form name="form" onsubmit="return validation()" action="signup.php">
+
+            <label for="username" style="color: rgb(177, 220, 20);">Username:</label>
+            <div class="username">
+                <input type="text" name="my_username" id="username" required autocomplete="off">
+            </div> <br>
+
+            <label for="userID" style="color: rgb(177, 220, 20);">UserID:</label>
+            <div class="userID">
+                <input type="text" name="my_userID" id="userID" required autocomplete="off">
+            </div> <br>
+
+            <label for="email" style="color: rgb(177, 220, 20);">Email:</label>
+            <div class="email">
+                <input type="email" name="my_email" id="email" required autocomplete="off">
+            </div> <br>
+
+            <label for="passwd" style="color: rgb(177, 220, 20);">Password:</label>
+            <div class="password">
+                <input type="text" name="my_pw" id="passwd" required autocomplete="off">
+            </div><br>
+
+            <label for="confirmpasswd" style="color: rgb(177, 220, 20);">Confirm Password:</label>
+            <div class="confirmpassword">
+                <input type="text" name="my_cpw" id="confirmpasswd" required autocomplete="off">
+            </div><br>
+
+            <label for="planID" style="color: rgb(177, 220, 20);">My Plan:</label>
+            <div class="plan">
+                <input type="number" name="plan_id" id="planID" required>
+            </div><br>
+
+            <div class="signup_button">
+                <input type="submit" value="SignUp">&nbsp;
+                <input type="reset" value="Reset">&nbsp;
+            </div>
+
+        </form>
+    </fieldset>
+
+     <script type="text/javascript">
+    
+        function validation()
+        {
+            var user = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var pass = document.getElementById('passwd').value;
+            var ckpass = document.getElementById('confirmpasswd').value;
+
+            if(!isNaN(user)){
+                alert("USER NAME CAN'T BE A NUMBER");
+                return false;
+            }
+
+            if(!email.match( /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/))
+            {
+                alert("**Invalid Email");
+                return false;
+            }
+
+            if(pass.length<=8){
+                alert("**Password length too short, must be more than 8");
+                return false;
+            }
+            
+            if(pass!=ckpass){
+                alert("**Password Does Not Match");
+                return false;
+            }
+
+
+
+        }
+
+     </script>
+
+</body>
+
+</html>
